@@ -1,0 +1,102 @@
+내장객체
+request (javax.servlet.http.HttpServletRequest)
+	- 요청 헤더
+	- 데이터 처리
+
+response(javax.servlet.http.HttpServletResponse)
+	- 응답 헤더 ( 출력 정보, 브라우저 통제 )
+		Location : URL -> 이동
+
+		sendRedirect
+			
+
+	- 응답 본문 
+	- 출력
+
+pageContext ( javax.servlet.jsp.PageContext )
+	
+application ( javax.servlet.ServletContext )
+	
+session ( javax.servlet.http.HttpSession )
+	
+out ( JspWriter )
+	
+
+pageContext
+
+속성을 관리하는 객체(4)
+
+scope
+
+pageContext < request < session < application
+- Object getAttribute
+- setAttribute ( String , Object )
+- remoteAttribute
+- getAttributeNames
+
+응답 코드
+2xx
+
+3xx
+
+4xx
+5xx
+
+response.getWriter();
+
+JspWriter out
+
+JDBC (Java DataBase Connectivity)
+
+java.sql.* -> API 규격
+-> 인터페이스 
+
+MySQL, Oracle, MSSQL
+
+mysql-connector-java
+
+Class.forName
+
+Connection 객체 -> DriverManaget.getConnection
+
+Connection getConnection (String url)
+Connection getConnection (String url, String user, String password)
+Connection getConnection (String url, Properties info)
+
+String url = “jdbc:mysql://localhost:3306/DB명?user=사용자&password=비밀번호”;
+
+Statement - Connection::createStatement()
+
+	ResultSet executeQuery(String sql) : SELECT
+
+	int executeUpdate(String sql) : INSERT, UPDATE, DELETE
+
+PreparedStatement - Connection::prepareStatement(String sql)
+
+CallableStatement - Connection::prepareCall(String sql)
+
+ResultSet -> 데이터의 추출 용도로 사용함.
+	- next();
+	- get자료형 (Int ,Double, String, Date, Time, …)
+	- 
+
+SELECT, INSERT, UPDATE, DELETE
+
+
+													     !!암기!!
+——————————————————————————————————————————————————
+Connection : DriverManaget.getConnection
+						String url
+						“jdbc:mysql://localhost:3306/DB명?user=사용자아이디&password=비번&인코딩
+
+Statement - Connection::createStatement()
+					ResultSet executeQuery(String sql) : SELECT					int executeUpdate(String sql) : INSERT, UPDATE, DELETE
+
+PreparedStatement - Connection::prerpareStatement(String sql);
+					ResultSet executeQuery();
+					int executeUpdate();
+
+CallableStatement - Connection::prepareCall(String sql);
+					ResultSet executeQuery();
+					int executeUpdate();
+——————————————————————————————————————————————————
