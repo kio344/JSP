@@ -1,0 +1,58 @@
+액션태그
+<jsp: … />
+
+<jsp: …> </jsp:…>
+
+<jsp:forward page = “…“/>
+-페이지 변경
+response.sendRedirect(“..”)
+
+<jsp:include page=“..” />
+-페이지에 포함
+<%@ include file = “..”%>
+
+버퍼
+
+requestDispatcher
+	- forward
+	- include
+
+자바빈(javabean) == DTO
+
+<jsp: useBean id = “…” class= “…”/>
+
+JSP 내장 객체
+- request
+- response
+- session
+- application
+- config
+- out
+
+pageContext < request < session < aplication
+	적용범위 
+				>				>			>
+속성 -> 데이터의 저장과 조회
+- setAttribute
+- getAttribute
+- removeAttribute
+- getAttributeNames
+
+요청 전문
+요청 헤더(Request Header) : 요청하는 쪽의 정보, 본문 데이터의 형식..
+
+요청 본문(Request Body) : 
+데이터
+
+———————
+응답 전문
+응답 헤더 (Response Header) 	
+	- 응답 하는쪽의 정보, 응답 코드
+
+응답 본문(Response Body)
+실제 출력되는 부분 데이터
+
+http://localhost:3000/jspWeb/day04/exam03.jsp?t1=1&t2=2&t3=3
+
+requestURI : http://localhost:3000/jspWeb/day04/exam03.jsp
+queryString : ?t1=1&t2=2&t3=3
