@@ -1,0 +1,9 @@
+<c:if test="${!empty addCss}">
+	<c:forEach var="css" items="${addCss}" >
+		<link rel="stylesheet" type="text/css" href="<c:url value="/static/css" /> ${css}.css " />
+		
+	</c:forEach>
+	</c:if>
+ 위 코드는 empty 라는 예약어는 ~이 있는지 없는지 확인하는 코드이다.
+ 위 addCss가 있다면 forEach문을 실행시키는 문장이다.
+ ... 작성하는중
